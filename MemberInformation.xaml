@@ -1,0 +1,25 @@
+﻿<Window x:Class="Midterm_CoffeeMemberships.MemberInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm_CoffeeMemberships"
+        mc:Ignorable="d"
+        Title="MemberInformation" Height="450" Width="892">
+    <Canvas Background="#FF8B6099">
+        <Canvas Height="341" Canvas.Left="10" Canvas.Top="18" Width="242" Background="#FF603D6C" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <RadioButton x:Name="rbRegularMember" Content="Regular Member" Canvas.Left="20" Canvas.Top="218" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbGoldMember" Content="Gold Member" Canvas.Left="20" Canvas.Top="257" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="First Name" Canvas.Left="18" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="10"/>
+            <TextBox x:Name="tbFirstName" Canvas.Left="20" TextWrapping="Wrap" Text="TextBox" Canvas.Top="48" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Last Name" Canvas.Left="20" Canvas.Top="90" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="tbLastName" TextWrapping="Wrap" Text="TextBox" Width="204" HorizontalAlignment="Left" Canvas.Left="20" Canvas.Top="128" VerticalAlignment="Center"/>
+            <Button x:Name="btnAddMember" Content="Add Member" Canvas.Left="18" Canvas.Top="292" HorizontalAlignment="Left" VerticalAlignment="Center" Width="206"/>
+            <Label Content="Member Type:" Canvas.Left="20" Canvas.Top="180" HorizontalAlignment="Left" VerticalAlignment="Center" Width="184"/>
+        </Canvas>
+        <ListBox x:Name="lbMembers" Height="341" Width="292" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="269" Canvas.Top="18" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="lbMembers_SelectionChanged"/>
+        <ListBox x:Name="lbTransactionHistory" Height="302" Width="292" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="582" Canvas.Top="57" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Transaction History" Canvas.Left="582" Canvas.Top="19"/>
+
+    </Canvas>
+</Window>

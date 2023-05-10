@@ -23,6 +23,34 @@ namespace Midterm_CoffeeMemberships
         public MainWindow()
         {
             InitializeComponent();
+            Tea tea = new Tea("Mint Chocolate", 5.98, 55, 0, "black");
+            Coffee coffee = new Coffee("Dunkin Classic", 2.00, 25, 0, "medium");
+            MessageBox.Show(tea.ToString() + " " + coffee.ToString());
+        }
+
+        private void btnAddNewProduct_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMemberInfo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBuyProduct_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnUsePoints_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
