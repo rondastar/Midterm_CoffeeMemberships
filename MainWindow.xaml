@@ -7,15 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="892">
     <Canvas Background="#FFB57CC8">
-        <ListBox x:Name="lbProducts" Height="294" Width="451" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="10" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbTransactions" Height="204" Width="390" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="481" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbProducts" Height="277" Width="451" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="10" Canvas.Top="80" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbTransactions" Height="182" Width="390" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="481" Canvas.Top="142" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbMembers" Canvas.Left="481" Canvas.Top="16" Width="390" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="cbMembers_SelectionChanged"/>
-        <Button x:Name="btnMemberInfo" Content="Member Information" Canvas.Left="570" Canvas.Top="57" HorizontalAlignment="Left" VerticalAlignment="Center" Width="212" Height="46" Click="btnMemberInfo_Click"/>
-        <Label Content="Products" Canvas.Left="10" Canvas.Top="21" RenderTransformOrigin="-0.275,0.372" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="btnMemberInfo" Content="View/Update Member Information" Canvas.Left="511" Canvas.Top="57" HorizontalAlignment="Left" VerticalAlignment="Center" Width="333" Height="46" Click="btnMemberInfo_Click"/>
+        <Label Content="Products" Canvas.Left="10" Canvas.Top="47" RenderTransformOrigin="-0.275,0.372" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Label x:Name="lblMemberPoints" Content="Member Points: " Canvas.Left="481" Canvas.Top="324" HorizontalAlignment="Center" VerticalAlignment="Top" Width="157"/>
-        <Button x:Name="btnAddNewProduct" Content="Add New Product" Canvas.Left="10" Canvas.Top="59" Height="44" Width="205" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnAddNewProduct_Click"/>
+        <Button x:Name="btnAddNewProduct" Content="Add New Product" Canvas.Left="10" Canvas.Top="370" Height="44" Width="205" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnAddNewProduct_Click"/>
         <Button x:Name="btnBuyProduct" Content="Buy Product" Canvas.Left="511" Canvas.Top="370" Height="42" Width="153" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnBuyProduct_Click"/>
         <Button x:Name="btnUsePoints" Content="Use Points" Canvas.Left="688" Canvas.Top="370" Height="42" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnUsePoints_Click"/>
+        <Label Content="Member's Previous Transactions" Canvas.Left="481" Canvas.Top="109" FontWeight="Bold"/>
 
     </Canvas>
 </Window>

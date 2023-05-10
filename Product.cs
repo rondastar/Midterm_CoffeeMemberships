@@ -29,6 +29,9 @@ namespace Midterm_CoffeeMemberships
         public string Sku { get => _sku; }
         public double Price { get => _price; set => _price = value; }
         public int Points { get => _points; set => _points = value; }
+
+        public static int NumberOfProducts { get => _numberOfProducts; }
+
         public override string ToString()
         {
             return $"{GetType()} - {Sku} - {Name} - {Price.ToString("c")} - {Points} points";
