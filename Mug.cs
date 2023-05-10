@@ -12,13 +12,13 @@ namespace Midterm_CoffeeMemberships
         protected Mug(string name, double price, int points, string design) : base(name, price, points)
         {
             _design = design;
-        }
+        } // constructor
 
         public string Design { get => _design; set => _design = value; }
 
         public override string ToString()
         {
             return base.ToString() + $" - {Design}";
-        }
+        } // override ToString
     }
 }

@@ -16,11 +16,11 @@ namespace Midterm_CoffeeMemberships
         public Drink(string name, double price, int points, Size drinkSize) : base (name, price, points)
         {
             _drinkSize = drinkSize;
-        }
+        } // constructor
 
         public override string ToString()
         {
             return base.ToString() + $" - {DrinkSize}";
-        }
+        } // override ToString
     }
 }

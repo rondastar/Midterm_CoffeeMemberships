@@ -32,31 +32,31 @@ namespace Midterm_CoffeeMemberships
             Breakfast breakfast = new Breakfast("Croissanwich", 8.99, 85, true, true);
             Lunch lunch = new Lunch("Sub Sandwich", 9.99, 95, false, false);
             MessageBox.Show(tea.ToString() + " \n" + coffee.ToString() + " \n" + breakfast.ToString() + " \n" + lunch.ToString() + " \nNumber of Products: " + Product.NumberOfProducts);
-        }
+        } // MainWindow
 
         private void btnAddNewProduct_Click(object sender, RoutedEventArgs e)
         {
 
-        }
+        } // btnAddNewProduct_Click
 
         private void btnMemberInfo_Click(object sender, RoutedEventArgs e)
         {
 
-        }
+        } // btnMemberInfo_Click
 
         private void btnBuyProduct_Click(object sender, RoutedEventArgs e)
         {
 
-        }
+        } // btnBuyProduct_Click
 
         private void btnUsePoints_Click(object sender, RoutedEventArgs e)
         {
 
-        }
+        } // btnUsePoints_Click
 
         private void cbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-        }
+        } // cbMembers_SelectionChanged
     }
 }

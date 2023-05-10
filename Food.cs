@@ -13,12 +13,12 @@ namespace Midterm_CoffeeMemberships
         protected Food(string name, double price, int points, bool isHeated) : base(name, price, points)
         {
             _isHeated = isHeated;
-        }
+        } // constructor
         public bool IsHeated { get => _isHeated; set => _isHeated = value; }
 
         public override string ToString()
         {
             return base.ToString() + $" - Is heated? {IsHeated}";
-        }
+        } // override ToString
     }
 }

@@ -13,13 +13,13 @@ namespace Midterm_CoffeeMemberships
         public Breakfast(string name, double price, int points, bool isHeated, bool hasDairy) : base(name, price, points, isHeated)
         {
             _hasDairy = hasDairy;
-        }
+        } // constructor
 
         public bool HasDairy { get => _hasDairy; set => _hasDairy = value; }
 
         public override string ToString()
         {
             return base.ToString() + $" - Has dairy? {HasDairy}";
-        }
+        } // override ToString
     }
 }

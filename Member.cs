@@ -34,7 +34,7 @@ namespace Midterm_CoffeeMemberships
             _pointAmount = 0;
             _memberSince = DateTime.Now;
             _previousTransactions = new ObservableCollection<Product>();
-        }
+        } // constructor
 
         public string FirstName { get => _firstName; set => _firstName = value; }
         public string LastName { get => _lastName; set => _lastName = value; }
@@ -57,6 +57,6 @@ namespace Midterm_CoffeeMemberships
         public override string ToString()
         {
             return $"{GetType()} - {FirstName} {LastName} - Points: {PointAmount} - Member No.: {MemberNumber} - Member Since: {MemberSince.ToShortDateString}";
-        }
+        } // override ToString
     }
 }

@@ -27,6 +27,6 @@ namespace Midterm_CoffeeMemberships
         private void lbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-        }
+        } // lbMembers_SelectionChanged
     }
 }

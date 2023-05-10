@@ -11,6 +11,6 @@ namespace Midterm_CoffeeMemberships
         protected Merchandise(string name, double price, int points) : base(name, price, points)
         {
 
-        }
+        } // constructor
     }
 }

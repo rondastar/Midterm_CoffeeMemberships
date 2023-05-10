@@ -13,12 +13,12 @@ namespace Midterm_CoffeeMemberships
         public Tea(string name, double price, int points, Size drinkSize, string typeOfTea) : base(name, price, points, drinkSize)
         {
             _typeOfTea = typeOfTea;
-        }
+        } // constructor
         public string TypeOfTea { get => _typeOfTea; set => _typeOfTea = value; }
 
         public override string ToString()
         {
             return base.ToString() + $" - {TypeOfTea}";
-        }
+        } // override ToString
     }
 }

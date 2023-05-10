@@ -13,13 +13,13 @@ namespace Midterm_CoffeeMemberships
         {
             // amount of gift card is same as price
             _amount = price;
-        }
+        } // constructor
 
         public double Amount { get => _amount; set => _amount = value; }
 
         public override string ToString()
         {
             return base.ToString() + $" - Amount: {Amount.ToString("c")}";
-        }
+        } // override ToString
     }
 }

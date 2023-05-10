@@ -24,7 +24,7 @@ namespace Midterm_CoffeeMemberships
             _sku = rand.Next(1000000, 10000000).ToString();
             // increase product count
             _numberOfProducts++;
-        }
+        } // constructor
         public string Name { get => _name; set => _name = value; }
         public string Sku { get => _sku; }
         public double Price { get => _price; set => _price = value; }
@@ -35,7 +35,7 @@ namespace Midterm_CoffeeMemberships
         public override string ToString()
         {
             return $"{GetType()} - {Sku} - {Name} - {Price.ToString("c")} - {Points} points";
-        }
+        } // override ToString
 
     } // class
 } // namespace
