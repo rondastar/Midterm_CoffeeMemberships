@@ -46,13 +46,7 @@
             <Button x:Name="btnBreakfast" Content="Breakfast" Canvas.Left="25" Canvas.Top="112" Width="98" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnBreakfast_Click"/>
             <Button x:Name="btnLunch" Content="Lunch" Canvas.Left="156" Canvas.Top="112" Width="98" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnLunch_Click"/>
         </Canvas>
-        <ListView Height="221" Width="575" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="307" Canvas.Top="18" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <ListBox x:Name="lbProducts" Height="217" Width="571" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="307" Canvas.Top="28" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
 
     </Canvas>

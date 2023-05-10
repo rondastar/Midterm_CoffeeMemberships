@@ -10,7 +10,7 @@ namespace Midterm_CoffeeMemberships
     internal class RegularMember : Member
     {
 
-        protected RegularMember(string firstName, string lastName) : base(firstName, lastName)
+        public RegularMember(string firstName, string lastName) : base(firstName, lastName)
         {
 
         }
@@ -23,7 +23,7 @@ namespace Midterm_CoffeeMemberships
 
         //Override AddPoints(Product) : Abstract
         //Add the products points for the member
-        public override void AddPoints(Product product)
+        override public void AddPoints(Product product)
         {
             PointAmount += product.Points;
         }

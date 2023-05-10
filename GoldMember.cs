@@ -9,7 +9,7 @@ namespace Midterm_CoffeeMemberships
     internal class GoldMember : Member
     {
 
-        protected GoldMember(string firstName, string lastName) : base(firstName, lastName)
+        public GoldMember(string firstName, string lastName) : base(firstName, lastName)
         {
 
         }
@@ -22,7 +22,7 @@ namespace Midterm_CoffeeMemberships
 
         //Override AddPoints(Product) : Abstract
         //Add the products points + 50 for the member
-        public override void AddPoints(Product product)
+        override public void AddPoints(Product product)
         {
             PointAmount += (product.Points + 50);
         }

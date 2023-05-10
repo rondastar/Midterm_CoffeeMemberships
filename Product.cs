@@ -34,7 +34,7 @@ namespace Midterm_CoffeeMemberships
 
         public override string ToString()
         {
-            return $"{GetType()} - {Sku} - {Name} - {Price.ToString("c")} - {Points} points";
+            return $"{GetType().Name} - {Sku} - {Name} - {Price.ToString("c")} - {Points} points";
         } // override ToString
 
     } // class

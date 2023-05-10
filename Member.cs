@@ -56,7 +56,7 @@ namespace Midterm_CoffeeMemberships
         //- GetType() - First Name Last Name - Points(Display Points) - Member Number -–
         public override string ToString()
         {
-            return $"{GetType()} - {FirstName} {LastName} - Points: {PointAmount} - Member No.: {MemberNumber} - Member Since: {MemberSince.ToShortDateString}";
+            return $"{GetType().Name} - {FirstName} {LastName} - Points: {PointAmount} - Member No.: {MemberNumber} - Member Since: {MemberSince.Year}";
         } // override ToString
     }
 }

@@ -9,7 +9,7 @@ namespace Midterm_CoffeeMemberships
     internal class GiftCard : Product
     {
         double _amount;
-        protected GiftCard(string name, double price, int points) : base(name, price, points)
+        public GiftCard(string name, double price, int points) : base(name, price, points)
         {
             // amount of gift card is same as price
             _amount = price;

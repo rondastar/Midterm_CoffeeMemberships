@@ -22,8 +22,12 @@ namespace Midterm_CoffeeMemberships
         public MemberInformation()
         {
             InitializeComponent();
+            LinkWindowToData();
         }
-
+        private void LinkWindowToData()
+        {
+            lbMembers.ItemsSource = Data.Members;
+        }
         private void lbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

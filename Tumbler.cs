@@ -9,7 +9,7 @@ namespace Midterm_CoffeeMemberships
     internal class Tumbler : Merchandise
     {
         string _color;
-        protected Tumbler(string name, double price, int points, string color) : base(name, price, points)
+        public Tumbler(string name, double price, int points, string color) : base(name, price, points)
         {
             _color = color;
         } // constructor

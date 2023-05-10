@@ -9,7 +9,7 @@ namespace Midterm_CoffeeMemberships
     internal class Mug : Merchandise
     {
         string _design;
-        protected Mug(string name, double price, int points, string design) : base(name, price, points)
+        public Mug(string name, double price, int points, string design) : base(name, price, points)
         {
             _design = design;
         } // constructor
