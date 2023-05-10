@@ -45,8 +45,10 @@ namespace Midterm_CoffeeMemberships
 
         //        DeductPoints(Product) : Abstract
         abstract public void DeductPoints(Product product);
+
         //AddPoints(Product) : Abstract
         abstract public void AddPoints(Product product);
+
         //Public AddProduct(Product) : Add product to previousTransactions Collection
         public void AddProduct(Product product)
         {

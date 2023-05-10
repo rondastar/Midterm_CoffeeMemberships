@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="892">
     <Canvas Background="#FFB57CC8">
-        <ListBox x:Name="lbProducts" Height="316" Width="451" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="10" Canvas.Top="41" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbProducts" Height="316" Width="451" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="10" Canvas.Top="41" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="lbProducts_SelectionChanged"/>
         <ListBox x:Name="lbTransactions" Height="171" Width="390" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="481" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbMembers" Canvas.Left="481" Canvas.Top="43" Width="390" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="cbMembers_SelectionChanged"/>
         <Button x:Name="btnMemberInfo" Content="View/Update Member Information" Canvas.Left="538" Canvas.Top="368" HorizontalAlignment="Left" VerticalAlignment="Top" Width="333" Height="46" Click="btnMemberInfo_Click"/>
         <Label Content="Products" Canvas.Left="10" Canvas.Top="8" RenderTransformOrigin="-0.275,0.372" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Label x:Name="lblMemberPoints" Content="Member Points: " Canvas.Left="485" Canvas.Top="261" HorizontalAlignment="Center" VerticalAlignment="Center" Width="157"/>
+        <Label x:Name="lblMemberPoints" Content="Member Points: " Canvas.Left="485" Canvas.Top="261" HorizontalAlignment="Left" VerticalAlignment="Center" Width="325"/>
         <Button x:Name="btnAddNewProduct" Content="Add New Product" Canvas.Left="10" Canvas.Top="370" Height="44" Width="205" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnAddNewProduct_Click"/>
         <Button x:Name="btnBuyProduct" Content="Buy Product" Canvas.Left="485" Canvas.Top="299" Height="42" Width="153" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnBuyProduct_Click"/>
         <Button x:Name="btnUsePoints" Content="Use Points" Canvas.Left="654" Canvas.Top="299" Height="42" Width="124" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnUsePoints_Click"/>

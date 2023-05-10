@@ -47,28 +47,53 @@ namespace Midterm_CoffeeMemberships
             newMemberWindow.Show();
         } // btnMemberInfo_Click
 
+        private void RefreshMemberPointDisplay()
+        {
+            lblMemberPoints.Content = $"Member Points: {Data.CurrentMember.PointAmount}";
+        }
         private void btnBuyProduct_Click(object sender, RoutedEventArgs e)
         {
-            Member member = Data.CurrentMember;
-            Product product = Data.CurrentProduct;
-            member.AddProduct(product);
-            member.AddPoints(product);
+            if (lbProducts.SelectedIndex >=0 && cbMembers.SelectedIndex >= 0)
+            {
+                Member member = Data.CurrentMember;
+                Product product = Data.CurrentProduct;
+                member.AddProduct(product);
+                member.AddPoints(product);
+                RefreshMemberPointDisplay();
+            }
         } // btnBuyProduct_Click
 
         private void btnUsePoints_Click(object sender, RoutedEventArgs e)
         {
-            Member member = Data.CurrentMember;
-            Product product = Data.CurrentProduct;
-            member.AddProduct(product);
-            member.DeductPoints(product);
+            if (lbProducts.SelectedIndex >= 0 && cbMembers.SelectedIndex >= 0)
+            {
+                Member member = Data.CurrentMember;
+                Product product = Data.CurrentProduct;
+                if(member.PointAmount >= product.Points)
+                {
+                    member.DeductPoints(product);
+                    member.AddProduct(product);
+                    RefreshMemberPointDisplay();
+                }
+                else
+                {
+                    MessageBox.Show("Point balance is not sufficient for this purchase.");
+                }
+            }
         } // btnUsePoints_Click
 
         private void cbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int selectedIndex = cbMembers.SelectedIndex;
             Data.UpdateCurrentMember(selectedIndex);
-            lblMemberPoints.Content = $"Member Points: {Data.CurrentMember.PointAmount}";
+            RefreshMemberPointDisplay();
             lbTransactions.ItemsSource = Data.CurrentMember.PreviousTransactions;
         } // cbMembers_SelectionChanged
+
+        private void lbProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int selectedIndex = lbProducts.SelectedIndex;
+            Data.UpdateCurrentProduct(selectedIndex);
+        }
     }
 }

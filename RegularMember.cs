@@ -4,6 +4,7 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Midterm_CoffeeMemberships
 {
@@ -18,7 +19,7 @@ namespace Midterm_CoffeeMemberships
         //Deduct the products points from the member
         override public void DeductPoints(Product product)
         {
-            PointAmount -= product.Points;    
+         PointAmount -= product.Points;
         }
 
         //Override AddPoints(Product) : Abstract
