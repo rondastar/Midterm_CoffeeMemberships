@@ -14,7 +14,7 @@
             <TextBox x:Name="tbFirstName" Canvas.Left="20" TextWrapping="Wrap" Canvas.Top="48" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Label Content="Last Name" Canvas.Left="20" Canvas.Top="90" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White"/>
             <TextBox x:Name="tbLastName" TextWrapping="Wrap" Width="204" HorizontalAlignment="Left" Canvas.Left="20" Canvas.Top="128" VerticalAlignment="Center"/>
-            <Button x:Name="btnAddMember" Content="Add Member" Canvas.Left="18" Canvas.Top="292" HorizontalAlignment="Left" VerticalAlignment="Center" Width="206"/>
+            <Button x:Name="btnAddMember" Content="Add Member" Canvas.Left="18" Canvas.Top="292" HorizontalAlignment="Left" VerticalAlignment="Center" Width="206" Click="btnAddMember_Click"/>
             <Label Content="Member Type:" Canvas.Left="20" Canvas.Top="180" HorizontalAlignment="Left" VerticalAlignment="Center" Width="184" Foreground="White"/>
         </Canvas>
         <ListBox x:Name="lbMembers" Height="341" Width="292" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="277" Canvas.Top="68" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="lbMembers_SelectionChanged"/>

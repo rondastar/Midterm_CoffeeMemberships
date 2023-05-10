@@ -41,7 +41,7 @@ namespace Midterm_CoffeeMemberships
         public string MemberNumber { get => _memberNumber; }
         public int PointAmount { get => _pointAmount; set => _pointAmount = value; }
         public DateTime MemberSince { get => _memberSince; }
-        internal ObservableCollection<Product> PreviousTransactions { get => _previousTransactions; }
+        public ObservableCollection<Product> PreviousTransactions { get => _previousTransactions; }
 
         //        DeductPoints(Product) : Abstract
         abstract public void DeductPoints(Product product);

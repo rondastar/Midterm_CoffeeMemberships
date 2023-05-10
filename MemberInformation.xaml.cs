@@ -22,15 +22,45 @@ namespace Midterm_CoffeeMemberships
         public MemberInformation()
         {
             InitializeComponent();
-            LinkWindowToData();
+            PopulateMemberList();
         }
-        private void LinkWindowToData()
+        private void PopulateMemberList()
         {
             lbMembers.ItemsSource = Data.Members;
         }
         private void lbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            int selectedIndex = lbMembers.SelectedIndex;
+            Data.UpdateCurrentMember(selectedIndex);
+            lbTransactionHistory.ItemsSource = Data.CurrentMember.PreviousTransactions;
         } // lbMembers_SelectionChanged
+
+        private string NewMemberFirstName()
+        {
+            string firstName = tbFirstName.Text;
+            return firstName;
+        }
+        private string NewMemberLastName()
+        {
+            string lastName = tbLastName.Text;
+            return lastName;
+        }
+        private void btnAddMember_Click(object sender, RoutedEventArgs e)
+        {
+            if(rbGoldMember.IsChecked == true)
+            {
+                GoldMember member = new GoldMember(NewMemberFirstName(), NewMemberLastName());
+                Data.AddMemberToCollection(member);
+            }
+            else if(rbRegularMember.IsChecked == true)
+            {
+                RegularMember member = new RegularMember(NewMemberFirstName(), NewMemberLastName());
+                Data.AddMemberToCollection(member);
+            }
+            else
+            {
+                MessageBox.Show("Please select a membership type.");
+            }
+        }
     }
 }

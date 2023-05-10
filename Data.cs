@@ -49,14 +49,14 @@ namespace Midterm_CoffeeMemberships
         {
             Members.Add(member);
         }
-        public static void UpdateCurrentProduct(Product product)
+        public static void UpdateCurrentProduct(int productIndex)
         {
-            _currentProduct = product;
+            _currentProduct = Products[productIndex];
         }
 
-        public static void UpdateCurrentMember(Member member)
+        public static void UpdateCurrentMember(int memberIndex)
         {
-            _currentMember = member;
+            _currentMember = Members[memberIndex];
         }
 
         public static void Preload()
@@ -80,6 +80,7 @@ namespace Midterm_CoffeeMemberships
             GoldMember gm = new GoldMember("Carol", "Goodner");
             AddMemberToCollection(rm);
             AddMemberToCollection(gm);
+            gm.PreviousTransactions.Add(tea);
         }
 
         //Your data class is vital to your project.All listboxes or combo boxes that need to display products or

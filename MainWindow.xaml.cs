@@ -49,17 +49,26 @@ namespace Midterm_CoffeeMemberships
 
         private void btnBuyProduct_Click(object sender, RoutedEventArgs e)
         {
-
+            Member member = Data.CurrentMember;
+            Product product = Data.CurrentProduct;
+            member.AddProduct(product);
+            member.AddPoints(product);
         } // btnBuyProduct_Click
 
         private void btnUsePoints_Click(object sender, RoutedEventArgs e)
         {
-
+            Member member = Data.CurrentMember;
+            Product product = Data.CurrentProduct;
+            member.AddProduct(product);
+            member.DeductPoints(product);
         } // btnUsePoints_Click
 
         private void cbMembers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            int selectedIndex = cbMembers.SelectedIndex;
+            Data.UpdateCurrentMember(selectedIndex);
+            lblMemberPoints.Content = $"Member Points: {Data.CurrentMember.PointAmount}";
+            lbTransactions.ItemsSource = Data.CurrentMember.PreviousTransactions;
         } // cbMembers_SelectionChanged
     }
 }
