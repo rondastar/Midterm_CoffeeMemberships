@@ -119,6 +119,8 @@ namespace Midterm_CoffeeMemberships
             string name = tbColorOrStyle.Text;
             return name;
         }
+
+        // QUESTION: Other thank the class types and specific fields needed for their constructors, most of this code is repeated. How could it be made more efficient/concise?
         private void btnGiftCard_Click(object sender, RoutedEventArgs e)
         {
             if (ValidatePriceAndPoints())
